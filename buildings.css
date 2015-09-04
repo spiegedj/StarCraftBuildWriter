@@ -55,6 +55,17 @@
 .building-thumb-54x49, .building-thumb-54x49 span {display:block; }
 .building-thumb-54x49 span {height:49px; background:url('images/building-thumbs-54x49.gif') no-repeat;}
 
-.building-thumb-54x49 .nexus {background-position:0 0;}
-.building-thumb-54x49 .pylon {background-position:0 -61px;}
-.building-thumb-54x49 .assimilator {background-position:0 -130px;}
+.building-thumb-54x49 .nexus                {background-position:0 0;}
+.building-thumb-54x49 .pylon                {background-position:0 -49px;}
+.building-thumb-54x49 .assimilator          {background-position:0 -98px;}
+.building-thumb-54x49 .gateway              {background-position:0 -147px;}
+.building-thumb-54x49 .forge                {background-position:0 -196px;}
+.building-thumb-54x49 .photon-cannon        {background-position:0 -245px;}
+.building-thumb-54x49 .stargate             {background-position:0 -294px;}
+.building-thumb-54x49 .robotics-facility    {background-position:0 -343px;}
+.building-thumb-54x49 .twilight-council     {background-position:0 -392px;}
+.building-thumb-54x49 .fleet-beacon         {background-position:0 -441px;}
+.building-thumb-54x49 .robotics-bay         {background-position:0 -490px;}
+.building-thumb-54x49 .templar-archives     {background-position:0 -539px;}
+.building-thumb-54x49 .dark-shrine          {background-position:0 -588px;}
+.building-thumb-54x49 .cybernetics-core     {background-position:0 -637px;}
