@@ -1,0 +1,55 @@
+
+/* Building Large */
+.building-icon { margin: 5px; }
+
+.building-thumb, .building-thumb span { display: block; color:#3B7CB9; width:268px; height:90px }
+.building-thumb span { height:90px; margin-bottom: 5px; background:url('images/buildings.png') no-repeat;}
+
+.building-thumb:hover .nexus {background-position:-278px 0;}
+.building-thumb .nexus {background-position:0 0;}
+
+.building-thumb:hover .pylon {background-position:-278px -100px;}
+.building-thumb .pylon {background-position:0 -100px;}
+
+.building-thumb:hover .assimilator {background-position:-278px -200px;}
+.building-thumb .assimilator {background-position:0 -200px;}
+
+.building-thumb:hover .gateway {background-position:-278px -300px;}
+.building-thumb .gateway {background-position:0 -300px;}
+
+.building-thumb:hover .forge {background-position:-278px -400px;}
+.building-thumb .forge {background-position:0 -400px;}
+
+.building-thumb:hover .photon-cannon {background-position:-278px -500px;}
+.building-thumb .photon-cannon {background-position:0 -500px;}
+
+.building-thumb:hover .stargate {background-position:-278px -600px;}
+.building-thumb .stargate {background-position:0 -600px;}
+
+.building-thumb:hover .robotics-facility {background-position:-278px -700px;}
+.building-thumb .robotics-facility {background-position:0 -700px;}
+
+.building-thumb:hover .twilight-council {background-position:-278px -800px;}
+.building-thumb .twilight-council {background-position:0 -800px;}
+
+.building-thumb:hover .fleet-beacon {background-position:-278px -900px;}
+.building-thumb .fleet-beacon {background-position:0 -900px;}
+
+.building-thumb:hover .robotics-bay {background-position:-278px -1000px;}
+.building-thumb .robotics-bay {background-position:0 -1000px;}
+
+.building-thumb:hover .templar-archives {background-position:-278px -1100px;}
+.building-thumb .templar-archives {background-position:0 -1100px;}
+
+.building-thumb:hover .dark-shrine {background-position:-278px -1200px;}
+.building-thumb .dark-shrine {background-position:0 -1200px;}
+
+.building-thumb:hover .cybernetics-core {background-position:-278px -1300px;}
+.building-thumb .cybernetics-core {background-position:0 -1300px;}
+
+/* Thumbnails */
+
+.building-thumb-54x49 { width: 45px; height: 45px; overflow: hidden; background: #000; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.building-thumb-54x49 span { margin: -5px 0 0 -5px; }
+
+.unit-thumb-54x49 .nexus {background-position:0 -12px;}

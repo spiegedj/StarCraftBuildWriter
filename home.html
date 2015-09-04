@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Starcraft Build Writer</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="homeController.js"></script>
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="stylesheet" type="text/css" href="unit-thumbnails.css" />
+    <link rel="stylesheet" type="text/css" href="buildings.css" />
+</head>
+<body >
+    <div ng-app="myApp" ng-controller="homeController">
+
+        <div ng-hide="mode !== 'Start'">
+            <button ng-click="toggleTimer()">{{ mode }}</button>
+        </div>
+
+        <div ng-hide="mode === 'Start'">
+
+            <div class="left-panel">
+                <span>{{ supply }} / {{ supplyCap }}</span><br />
+                <span>{{timeString}}</span>
+
+                <br />
+                <br />
+
+                <h1 class="clear"> Units </h1>
+
+
+                <div ng-repeat="unit in units" style="float: left">
+                    <span class="portrait-a">
+                        <span class="unit-thumb" ng-click="addUnit(unit)">
+                            <span class="{{ unit.ThumbnailName }}"></span>
+                        </span>
+                    </span>
+                </div>
+
+                <h1 class="clear"> Buildings </h1>
+
+                <div ng-repeat="building in buildings" style="float: left" class="building-icon">
+                    <span class="building-thumb" ng-click="addBuilding(building)">
+                        <span class="{{ building.ThumbnailName }}"></span>
+                    </span>
+                </div>
+
+                <h1 class="clear">Upgrades</h1>
+
+                <div>
+                    <span ng-repeat="upgrade in upgrades"><button ng-click="addUpgrade(upgrade)">{{ upgrade.Name }}</button></span>
+                </div>
+            </div>
+
+            <!--<textarea rows="50" cols="50" ng-model="buildOrderText"></textarea>-->
+            <div class="right-panel">
+                <table id="build-table">
+                    <thead>
+                        <tr>
+                            <th>Supply</th>
+                            <th></th>
+                            <th>Unit</th>
+                            <th></th>
+                            <th>Timer</th>
+                        </tr>
+                    </thead>
+
+                    <tr ng-repeat="action in build" class="table-row">
+                        <td class="table-supply"> {{ action.SupplyAtBuild}}</td>
+                        <td class="table-count"> {{ action.Count > 0 ? action.Count + " x" : ""}} </td>
+                        <td class="table-icon" ng-click="incrementCount(action, true)" ng-right-click="incrementCount(action, false)">
+                            <span class="portrait-c">
+                                <span class="{{ action.Type == 'A' ? 'unit-thumb-54x49' : 'building-thumb-54x49'  }}">
+                                    <span class="{{ action.ThumbnailName }}"></span>
+                                </span>
+                            </span>
+                        </td>
+                        <td class="table-name">
+                            {{ action.Name }}
+                        </td>
+                        <td>{{ action.Time }}</td>
+                        <td ng-click="removeAction(action)">X</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,186 @@
+/* portraits */
+.portrait-a { display: block; width: 75px; height: 75px; padding: 3px 7px 4px 6px; background: url("images/portrait-frame.gif") 0 -114px no-repeat; }
+.portrait-b { display: block; width: 59px; height: 59px; padding: 3px 0 0 6px; background: url("images/portrait-frame.gif") 0 -210px no-repeat; }
+.portrait-c { display: block; width: 50px; height: 48px; padding: 2px 0 0 5px; background: url("images/portrait-frame.gif") 0 -287px no-repeat; }
+.portrait-a .icon-frame,
+.portrait-b .icon-frame,
+.portrait-c .icon-frame { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
+.portrait-a:hover { background-position: -105px -114px; }
+.portrait-b:hover { background-position: -105px -210px; }
+.portrait-c:hover { background-position: -105px -287px; }
+
+.unit-thumb {width: 45px; height: 45px; overflow: hidden; background: #000; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
+
+
+.unit-thumb-54x49 { width: 45px; height: 45px; overflow: hidden; background: #000; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.unit-thumb-54x49 span { margin: -5px 0 0 -5px; }
+
+/****		Units Thumbnails styles	: 80x72	****/
+.unit-thumb, .unit-thumb span { display: block; color:#3B7CB9; width:75px; height:75px }
+.unit-thumb span { height:72px; margin-bottom: 5px; background:url('images/unit-thumbs-table.gif') no-repeat;}
+
+/* Protoss */
+.unit-thumb:hover .probe {background-position:-400px -25px;}
+.unit-thumb .probe, .unit-content .countermeasures .unit-thumb:hover .probe {background-position:0 -25px;}
+.unit-thumb:hover .zealot {background-position:-480px -25px;}
+.unit-thumb .zealot, .unit-content .countermeasures .unit-thumb:hover .zealot  {background-position:-80px -25px;}
+.unit-thumb:hover .stalker {background-position:-560px -25px;}
+.unit-thumb .stalker, .unit-content .countermeasures .unit-thumb:hover .stalker  {background-position:-160px -25px;}
+.unit-thumb:hover .sentry {background-position:-640px -25px;}
+.unit-thumb .sentry , .unit-content .countermeasures .unit-thumb:hover .sentry {background-position:-240px -25px;}
+.unit-thumb:hover .observer {background-position:-720px -25px;}
+.unit-thumb .observer, .unit-content .countermeasures .unit-thumb:hover .observer  {background-position:-320px -25px;}
+.unit-thumb:hover .immortal {background-position:-400px -111px;}
+.unit-thumb .immortal, .unit-content .countermeasures .unit-thumb:hover .immortal  {background-position:0 -111px;}
+.unit-thumb:hover .warp-prism {background-position:-480px -111px;}
+.unit-thumb .warp-prism, .unit-content .countermeasures .unit-thumb:hover .warp-prism  {background-position:-80px -111px;}
+.unit-thumb:hover .colossus {background-position:-560px -111px;}
+.unit-thumb .colossus, .unit-content .countermeasures .unit-thumb:hover .colossus  {background-position:-160px -111px;}
+.unit-thumb:hover .phoenix {background-position:-640px -111px;}
+.unit-thumb .phoenix, .unit-content .countermeasures .unit-thumb:hover .phoenix  {background-position:-240px -111px;}
+.unit-thumb:hover .void-ray {background-position:-720px -111px;}
+.unit-thumb .void-ray, .unit-content .countermeasures .unit-thumb:hover .void-ray  {background-position:-320px -111px;}
+.unit-thumb:hover .high-templar {background-position:-400px -197px;}
+.unit-thumb .high-templar, .unit-content .countermeasures .unit-thumb:hover .high-templar  {background-position:0 -197px;}
+.unit-thumb:hover .dark-templar {background-position:-480px -197px;}
+.unit-thumb .dark-templar, .unit-content .countermeasures .unit-thumb:hover .dark-templar  {background-position:-80px -197px;}
+.unit-thumb:hover .archon {background-position:-560px -197px;}
+.unit-thumb .archon, .unit-content .countermeasures .unit-thumb:hover .archon  {background-position:-160px -197px;}
+.unit-thumb:hover .carrier {background-position:-640px -197px;}
+.unit-thumb .carrier, .unit-content .countermeasures .unit-thumb:hover .carrier  {background-position:-240px -197px;}
+.unit-thumb:hover .mothership {background-position:-720px -197px;}
+.unit-thumb .mothership, .unit-content .countermeasures .unit-thumb:hover .mothership  {background-position:-320px -197px;}
+/* Terran */
+.unit-thumb:hover .scv {background-position:-400px -313px;}
+.unit-thumb .scv, .unit-content .countermeasures .unit-thumb:hover .scv  {background-position:0 -313px;}
+.unit-thumb:hover .marine {background-position:-480px -313px;}
+.unit-thumb .marine, .unit-content .countermeasures .unit-thumb:hover .marine  {background-position:-80px -313px;}
+.unit-thumb:hover .marauder {background-position:-560px -313px;}
+.unit-thumb .marauder, .unit-content .countermeasures .unit-thumb:hover .marauder  {background-position:-160px -313px;}
+.unit-thumb:hover .reaper {background-position:-640px -313px;}
+.unit-thumb .reaper, .unit-content .countermeasures .unit-thumb:hover .reaper {background-position:-240px -313px;}
+.unit-thumb:hover .ghost {background-position:-720px -313px;}
+.unit-thumb .ghost, .unit-content .countermeasures .unit-thumb:hover .ghost  {background-position:-320px -313px;}
+.unit-thumb:hover .hellion {background-position:-400px -399px;}
+.unit-thumb .hellion, .unit-content .countermeasures .unit-thumb:hover .hellion  {background-position:0 -399px;}
+.unit-thumb:hover .siege-tank {background-position:-480px -399px;}
+.unit-thumb .siege-tank, .unit-content .countermeasures .unit-thumb:hover .siege-tank  {background-position:-80px -399px;}
+.unit-thumb:hover .thor {background-position:-560px -399px;}
+.unit-thumb .thor, .unit-content .countermeasures .unit-thumb:hover .thor  {background-position:-160px -399px;}
+.unit-thumb:hover .viking {background-position:-640px -399px;}
+.unit-thumb .viking, .unit-content .countermeasures .unit-thumb:hover .viking  {background-position:-240px -399px;}
+.unit-thumb .viking-assault  {background:url('../../images/game/unit-thumbs-sample.gif') no-repeat; background-position:0 0;}
+.unit-thumb:hover .medivac {background-position:-720px -399px;}
+.unit-thumb .medivac, .unit-content .countermeasures .unit-thumb:hover .medivac  {background-position:-320px -399px;}
+.unit-thumb:hover .raven {background-position:-400px -485px;}
+.unit-thumb .raven, .unit-content .countermeasures .unit-thumb:hover .raven  {background-position:0 -485px;}
+.unit-thumb:hover .banshee {background-position:-480px -485px;}
+.unit-thumb .banshee, .unit-content .countermeasures .unit-thumb:hover .banshee  {background-position:-80px -485px;}
+.unit-thumb:hover .battlecruiser {background-position:-560px -485px;}
+.unit-thumb .battlecruiser, .unit-content .countermeasures .unit-thumb:hover .battlecruiser  {background-position:-160px -485px;}
+/* Zerg */
+.unit-thumb:hover .larva {background-position:-400px -601px;}
+.unit-thumb .larva, .unit-content .countermeasures .unit-thumb:hover .larva  {background-position:0 -601px;}
+.unit-thumb:hover .drone {background-position:-480px -601px;}
+.unit-thumb .drone, .unit-content .countermeasures .unit-thumb:hover .drone  {background-position:-80px -601px;}
+.unit-thumb:hover .overlord {background-position:-560px -601px;}
+.unit-thumb .overlord, .unit-content .countermeasures .unit-thumb:hover .overlord  {background-position:-160px -601px;}
+.unit-thumb:hover .zergling {background-position:-640px -601px;}
+.unit-thumb .zergling, .unit-content .countermeasures .unit-thumb:hover .zergling {background-position:-240px -601px;}
+.unit-thumb:hover .queen {background-position:-720px -601px;}
+.unit-thumb .queen, .unit-content .countermeasures .unit-thumb:hover .queen  {background-position:-320px -601px;}
+.unit-thumb:hover .hydralisk {background-position:-400px -687px;}
+.unit-thumb .hydralisk, .unit-content .countermeasures .unit-thumb:hover .hydralisk  {background-position:0 -687px;}
+.unit-thumb:hover .baneling {background-position:-480px -687px;}
+.unit-thumb .baneling, .unit-content .countermeasures .unit-thumb:hover .baneling  {background-position:-80px -687px;}
+.unit-thumb:hover .overseer {background-position:-560px -687px;}
+.unit-thumb .overseer, .unit-content .countermeasures .unit-thumb:hover .overseer  {background-position:-160px -687px;}
+.unit-thumb:hover .roach {background-position:-640px -687px;}
+.unit-thumb .roach, .unit-content .countermeasures .unit-thumb:hover .roach  {background-position:-240px -687px;}
+.unit-thumb:hover .infestor {background-position:-720px -687px;}
+.unit-thumb .infestor, .unit-content .countermeasures .unit-thumb:hover .infestor  {background-position:-320px -687px;}
+.unit-thumb:hover .mutalisk {background-position:-400px -773px;}
+.unit-thumb .mutalisk, .unit-content .countermeasures .unit-thumb:hover .mutalisk  {background-position:0 -773px;}
+.unit-thumb:hover .corruptor {background-position:-480px -773px;}
+.unit-thumb .corruptor, .unit-content .countermeasures .unit-thumb:hover .corruptor  {background-position:-80px -773px;}
+.unit-thumb:hover .nydus-worm {background-position:-560px -773px;}
+.unit-thumb .nydus-worm, .unit-content .countermeasures .unit-thumb:hover .nydus-worm  {background-position:-160px -773px;}
+.unit-thumb:hover .ultralisk {background-position:-640px -773px;}
+.unit-thumb .ultralisk, .unit-content .countermeasures .unit-thumb:hover .ultralisk  {background-position:-240px -773px;}
+.unit-thumb:hover .brood-lord {background-position:-720px -773px;}
+.unit-thumb .brood-lord, .unit-content .countermeasures .unit-thumb:hover .brood-lord  {background-position:-320px -773px;}
+
+/* HotS */
+.unit-thumb:hover .oracle {background-position: -400px -887px;}
+.unit-thumb .oracle, .unit-content .countermeasures .unit-thumb:hover .oracle  {background-position: 0 -887px;}
+.unit-thumb:hover .mothership-core {background-position: -480px -887px;}
+.unit-thumb .mothership-core, .unit-content .countermeasures .unit-thumb:hover .mothership-core  {background-position: -80px -887px;}
+.unit-thumb:hover .tempest {background-position: -560px -887px;}
+.unit-thumb .tempest, .unit-content .countermeasures .unit-thumb:hover .tempest  {background-position: -160px -887px;}
+.unit-thumb:hover .widow-mine {background-position: -400px -976px;}
+.unit-thumb .widow-mine, .unit-content .countermeasures .unit-thumb:hover .widow-mine   {background-position: 0 -976px;}
+.unit-thumb:hover .hellbat {background-position: -480px -976px;}
+.unit-thumb .hellbat, .unit-content .countermeasures .unit-thumb:hover .hellbat  {background-position: -80px -976px;}
+.unit-thumb:hover .viper{background-position: -405px -1063px;}
+.unit-thumb .viper, .unit-content .countermeasures .unit-thumb:hover .viper  {background-position: -5px -1063px;}
+.unit-thumb:hover .swarm-host {background-position: -480px -1063px;}
+.unit-thumb .swarm-host, .unit-content .countermeasures .unit-thumb:hover .swarm-host  {background-position: -80px -1063px;}
+
+/**** Units Thumbnails styles : 54x49	Added code to fix IE6 bug. Don't remove it! ****/
+.unit-thumb-54x49, .unit-thumb-54x49 span {display:block; }
+.unit-thumb-54x49 span {height:49px; background:url('images/unit-thumbs-54x49-table.gif') no-repeat;}
+
+/* Protoss */
+.unit-thumb-54x49 .probe {background-position:0 -12px;}
+.unit-thumb-54x49 .zealot {background-position:-54px -12px;}
+.unit-thumb-54x49 .stalker {background-position:-108px -12px;}
+.unit-thumb-54x49 .sentry {background-position:-162px -12px;}
+.unit-thumb-54x49 .observer {background-position:-216px -12px;}
+.unit-thumb-54x49 .immortal {background-position:0 -70px;}
+.unit-thumb-54x49 .warp-prism {background-position:-54px -70px;}
+.unit-thumb-54x49 .colossus {background-position:-108px -70px;}
+.unit-thumb-54x49 .phoenix {background-position:-162px -71px;}
+.unit-thumb-54x49 .void-ray {background-position:-216px -71px;}
+.unit-thumb-54x49 .high-templar {background-position:0 -131px;}
+.unit-thumb-54x49 .dark-templar {background-position:-54px -131px;}
+.unit-thumb-54x49 .archon {background-position:-108px -131px;}
+.unit-thumb-54x49 .carrier {background-position:-162px -131px;}
+.unit-thumb-54x49 .mothership {background-position:-216px -131px;}
+.unit-thumb-54x49 .mothership-core {background-position: -54px -597px;}
+.unit-thumb-54x49 .oracle {background-position: 2px -597px;}
+.unit-thumb-54x49 .tempest {background-position: -108px -597px;}
+/* Terran */
+.unit-thumb-54x49 .scv {background-position:0 -209px;}
+.unit-thumb-54x49 .marine {background-position:-54px -209px;}
+.unit-thumb-54x49 .marauder {background-position:-108px -209px;}
+.unit-thumb-54x49 .reaper{background-position:-162px -209px;}
+.unit-thumb-54x49 .ghost {background-position:-216px -209px;}
+.unit-thumb-54x49 .hellion {background-position:0 -268px;}
+.unit-thumb-54x49 .siege-tank {background-position:-54px -268px;}
+.unit-thumb-54x49 .thor {background-position:-108px -268px;}
+.unit-thumb-54x49 .viking {background-position:-162px -268px;}
+.unit-thumb-54x49 .viking-assault {background:url('../../images/game/unit-thumbs-sample.gif') no-repeat; background-position:0 0;}
+.unit-thumb-54x49 .medivac {background-position:-216px -268px;}
+.unit-thumb-54x49 .raven {background-position:0 -327px;}
+.unit-thumb-54x49 .banshee {background-position:-53px -326px;}
+.unit-thumb-54x49 .battlecruiser {background-position:-108px -326px;}
+.unit-thumb-54x49 .hellbat {background-position: -54px -656px;}
+.unit-thumb-54x49 .widow-mine {background-position: 0 -654px;}
+/* Zerg */
+.unit-thumb-54x49 .larva {background-position:0 -402px;}
+.unit-thumb-54x49 .drone {background-position:-54px -402px;}
+.unit-thumb-54x49 .overlord {background-position:-108px -402px;}
+.unit-thumb-54x49 .zergling{background-position:-162px -402px;}
+.unit-thumb-54x49 .queen {background-position:-216px -402px;}
+.unit-thumb-54x49 .hydralisk {background-position:0 -460px;}
+.unit-thumb-54x49 .baneling {background-position:-54px -460px;}
+.unit-thumb-54x49 .overseer {background-position:-108px -464px;}
+.unit-thumb-54x49 .roach {background-position:-162px -460px;}
+.unit-thumb-54x49 .infestor {background-position:-216px -460px;}
+.unit-thumb-54x49 .mutalisk {background-position:0 -518px;}
+.unit-thumb-54x49 .corruptor {background-position:-54px -518px;}
+.unit-thumb-54x49 .nydus-worm {background-position:-108px -518px;}
+.unit-thumb-54x49 .ultralisk {background-position:-162px -522px;}
+.unit-thumb-54x49 .brood-lord {background-position:-216px -518px;}
+.unit-thumb-54x49 .swarm-host {background-position: -57px -708px;}
+.unit-thumb-54x49 .viper {background-position: -2px -715px;}
