@@ -3,6 +3,9 @@
 <head>
     <title>Starcraft Build Writer</title>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="data.js"></script>
+    <script src="models/action.js"></script>
+    <script src="models/build.js"></script>
     <script src="homeController.js"></script>
     <link rel="stylesheet" type="text/css" href="home.css" />
     <link rel="stylesheet" type="text/css" href="unit-thumbnails.css" />
@@ -12,24 +15,24 @@
     <div ng-app="myApp" ng-controller="homeController">
 
         <div ng-hide="mode !== 'Start'">
-            <button ng-click="toggleTimer()">{{ mode }}</button>
+            <div id="play-button" ng-click="toggleTimer()"></div>
         </div>
 
         <div ng-hide="mode === 'Start'">
 
             <div class="left-panel">
-                <span>{{ supply }} / {{ supplyCap }}</span><br />
-                <span>{{timeString}}</span>
-
-                <br />
-                <br />
+                <div id="game-data">
+                    <span class="building-thumb-54x49" style="float: left"><span class="pylon"></span></span>
+                        <span id="current-supply">{{ build.supply }}</span> / <span id="supply-cap">{{ build.supplyCap }}</span><br />
+                        <span>{{timeString}}</span>
+                </div>
 
                 <h1 class="clear"> Units </h1>
 
 
                 <div ng-repeat="unit in units" style="float: left">
-                    <span class="portrait-a">
-                        <span class="unit-thumb" ng-click="addUnit(unit)">
+                    <span class="portrait-a" ng-if="unit.Unlocked">
+                        <span class="unit-thumb" ng-click="build.addToBuild(unit)">
                             <span class="{{ unit.ThumbnailName }}"></span>
                         </span>
                     </span>
@@ -37,8 +40,8 @@
 
                 <h1 class="clear"> Buildings </h1>
 
-                <div ng-repeat="building in buildings" style="float: left" class="building-icon">
-                    <span class="building-thumb" ng-click="addBuilding(building)">
+                <div ng-repeat="building in buildings" style="float: left" >
+                    <span class="building-thumb" ng-click="build.addToBuild(building)" ng-if="building.Unlocked">
                         <span class="{{ building.ThumbnailName }}"></span>
                     </span>
                 </div>
@@ -52,32 +55,43 @@
 
             <!--<textarea rows="50" cols="50" ng-model="buildOrderText"></textarea>-->
             <div class="right-panel">
+                <label>Build Name: </label>
+                <input type="text" ng-model="build.name" />
+                <h1>{{build.name}}</h1>
+                <div id="supply-insert">
+                    <div class="supply-insert-value hover" ng-click="supplyInsert = supplyInsert + 1" ng-right-click="supplyInsert = supplyInsert - 1">{{ supplyInsert }}</div>
+                    <div>
+                        <label>Use this supply when inserting: </label>
+                        <input type="checkbox" ng-model="useSupplyInsert" />
+                    </div>
+                </div>
+
                 <table id="build-table">
                     <thead>
                         <tr>
                             <th>Supply</th>
+                            <th>Units</th>
+                            <th>Time</th>
                             <th></th>
-                            <th>Unit</th>
-                            <th></th>
-                            <th>Timer</th>
                         </tr>
                     </thead>
 
-                    <tr ng-repeat="action in build" class="table-row">
-                        <td class="table-supply"> {{ action.SupplyAtBuild}}</td>
-                        <td class="table-count"> {{ action.Count > 0 ? action.Count + " x" : ""}} </td>
-                        <td class="table-icon" ng-click="incrementCount(action, true)" ng-right-click="incrementCount(action, false)">
-                            <span class="portrait-c">
-                                <span class="{{ action.Type == 'A' ? 'unit-thumb-54x49' : 'building-thumb-54x49'  }}">
-                                    <span class="{{ action.ThumbnailName }}"></span>
-                                </span>
-                            </span>
+                    <tr ng-repeat="(supplyChar, action) in build.actions" class="table-row">
+                        <td class="table-supply build-hover" ng-click="build.changeBuildSupply(action, 1)" ng-right-click="build.changeBuildSupply(action, -1)"> {{ action.buildSupply }}</td>
+                        <td class="table-icon">
+                            <table ng-repeat="(objName, obj) in action.objects" class="build-object build-hover" ng-click="build.addToBuild(obj, supplyChar)" ng-right-click="build.removeFromBuild(obj, 1, supplyChar)">
+                                <tr>
+                                    <td class="table-count">{{ obj.Count > 1 ? obj.Count : "" }}</td>
+                                    <td class="portrait-c">
+                                        <span class="{{ obj.Type == 'A' ? 'unit-thumb-54x49' : 'building-thumb-54x49'  }}">
+                                            <span class="{{ obj.ThumbnailName }}"></span>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </table>
                         </td>
-                        <td class="table-name">
-                            {{ action.Name }}
-                        </td>
-                        <td>{{ action.Time }}</td>
-                        <td ng-click="removeAction(action)">X</td>
+                        <td class="table-time">{{ action.time }}</td>
+                        <td ng-click="build.deleteAction(supplyChar)" class="table-del build-hover">X</td>
                     </tr>
                 </table>
             </div>

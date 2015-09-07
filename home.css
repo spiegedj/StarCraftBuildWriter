@@ -7,8 +7,35 @@ body {
     font-family: Tahoma, Arial, Helvetica, sans-serif; 
     padding: 1px 6px 0 6px; 
     /*background: url("images/content-bg.png") 0 0 repeat-y;*/ 
-    background-color: #000d20;
+    background-color: #000819;
     color: white; 
+}
+
+.hover {
+    cursor: pointer;
+}
+
+.hover:hover {
+    background-color: #FF8000;
+}
+
+/* Game Data */
+
+#game-data {
+    float: right;
+    font-size:  200%;
+}
+
+#supply-insert {
+    text-align:center;
+    margin-bottom: 20px;
+}
+
+.supply-insert-value {
+    width: 60px;
+    margin: auto;
+    font-size:  300%;
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
 }
 
 /* Panels */
@@ -20,10 +47,11 @@ body {
 
 .right-panel {
     float: right;
-    padding: 20px;
+    padding: 20px 0;
     width: 35%;
-    height: 95vh;
+    height: 95.5vh;
     overflow-y: auto;
+    /*background-color: #02264d;*/
     background-color: #02264d;
 }
 
@@ -31,14 +59,31 @@ body {
     clear: both;
 }
 
+/* Start Screen */
+
+#play-button {
+    margin: 200px auto;
+    width: 280px;
+    height: 65px;
+    background-image: url('images/PlayButton.png');
+}
+
+#play-button:hover {
+    background-image: url('images/PlayButtonActive.png');
+}
 
 /* Build Order Table */
 #build-table {
     width: 100%;
     border-collapse: collapse;
+    text-align: center;
 }
 
 #build-table tr {
+    border-bottom: 2px solid #000819;
+}
+
+#build-table td {
     vertical-align: middle;
 }
 
@@ -47,29 +92,46 @@ body {
 }
 
 #build-table .table-row:hover {
-    background-color: #57afe7;
+    background-color: #FF8000;
 }
 
-#build-table td:hover {
-    background-color: #90caf9 ;
+#build-table .build-hover {
+    cursor: pointer;
 }
 
+#build-table .build-hover:hover {
+    background-color: #90caf9;
+}
 
-.table-supply {
-    text-align: right;
+#build-table .table-supply {
+    text-align: center;
     font-size: xx-large;
-    width: 30px;
-}
-
-.table-count {
-    width: 60px;
-    text-align: right;
+    width: 100px;
 }
 
 .table-icon {
-    width: 45px;
+    width: 360px;
 }
 
-.table-name {
+.table-time {
+    width: 50px;
+}
 
+.table-del {
+    width: 50px;
+    color: red;
+}
+
+
+/* Build Object Table */
+
+table .build-object {
+    width: 90px;
+    float: left;
+}
+
+.table-count {
+    text-align: right;
+    vertical-align: middle;
+    width: 40px;
 }

@@ -7,7 +7,7 @@
 .portrait-c .icon-frame { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
 .portrait-a:hover { background-position: -105px -114px; }
 .portrait-b:hover { background-position: -105px -210px; }
-.portrait-c:hover { background-position: -105px -287px; }
+/*.portrait-c:hover { background-position: -105px -287px; }*/
 
 .unit-thumb {width: 45px; height: 45px; overflow: hidden; background: #000; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;}
 

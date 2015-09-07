@@ -1,8 +1,7 @@
 
 /* Building Large */
-.building-icon { margin: 5px; }
 
-.building-thumb, .building-thumb span { display: block; color:#3B7CB9; width:268px; height:90px }
+.building-thumb, .building-thumb span { display: block; color:#3B7CB9; width:268px; height:90px; margin: 5px;}
 .building-thumb span { height:90px; margin-bottom: 5px; background:url('images/buildings.png') no-repeat;}
 
 .building-thumb:hover .nexus {background-position:-278px 0;}

@@ -1,240 +1,32 @@
-data = {
-    "units": [
-        {
-            "Name": "Probe",
-            "Minerals": 50,
-            "Gas": 0,
-            "Supply" : 1,
-            "BuildTime" : 17
-        },
-
-        {
-            "Name": "Zealot",
-            "Minerals": 100,
-            "Gas": 0,
-            "Supply": 2,
-            "BuildTime": 38
-        },
-
-        {
-            "Name": "Stalker",
-            "Minerals": 125,
-            "Gas": 50,
-            "Supply": 2,
-            "BuildTime": 42
-        },
-        {
-            "Name": "Sentry",
-            "Minerals": 50,
-            "Gas": 100,
-            "Supply": 2,
-            "BuildTime": 37
-        },
-        {
-            "Name": "Observer",
-            "Minerals": 25,
-            "Gas": 75,
-            "Supply": 1,
-            "BuildTime": 30
-        },
-        {
-            "Name": "Immortal",
-            "Minerals": 250,
-            "Gas": 100,
-            "Supply": 4,
-            "BuildTime": 55
-        },
-        {
-            "Name": "Warp Prism",
-            "Minerals": 200,
-            "Gas": 0,
-            "Supply": 2,
-            "BuildTime": 90
-        },
-        {
-            "Name": "Colossus",
-            "Minerals": 300,
-            "Gas": 200,
-            "Supply": 6,
-            "BuildTime": 75
-        },
-        {
-            "Name": "Phoenix",
-            "Minerals": 150,
-            "Gas": 100,
-            "Supply": 2,
-            "BuildTime": 35
-        },
-        {
-            "Name": "Void Ray",
-            "Minerals": 250,
-            "Gas": 150,
-            "Supply": 4,
-            "BuildTime": 60
-        },
-        {
-            "Name": "High Templar",
-            "Minerals": 50,
-            "Gas": 150,
-            "Supply": 2,
-            "BuildTime": 55
-        },
-        {
-            "Name": "Dark Templar",
-            "Minerals": 125,
-            "Gas": 125,
-            "Supply": 2,
-            "BuildTime": 55
-        },
-        {
-            "Name": "Carrier",
-            "Minerals": 350,
-            "Gas": 250,
-            "Supply": 6,
-            "BuildTime": 120
-        },
-        {
-            "Name": "Mothership",
-            "Minerals": 300,
-            "Gas": 300,
-            "Supply": 6,
-            "BuildTime": 100
-        },
-        {
-            "Name": "Mothership Core",
-            "Minerals": 100,
-            "Gas": 100,
-            "Supply": 2,
-            "BuildTime": 30
-        },
-        {
-            "Name": "Oracle",
-            "Minerals": 150,
-            "Gas": 150,
-            "Supply": 3,
-            "BuildTime": 50
-        },
-        {
-            "Name": "Tempest",
-            "Minerals": 300,
-            "Gas": 200,
-            "Supply": 4,
-            "BuildTime": 60
+function shallowCopy(obj) {
+    var copy = {};
+    for (var attr in obj) {
+        if (attr !== '$$hashKey' && obj.hasOwnProperty(attr)) {
+            copy[attr] = obj[attr];
         }
-    ],
-
-    "buildings": [
-        {
-            "Name": "Pylon",
-            "Minerals": 100,
-            "Gas": 0,
-            "BuildTime": 25
-        },
-        {
-            "Name": "Nexus",
-            "Minerals": 400,
-            "Gas": 0,
-            "BuildTime": 100
-        },
-        {
-            "Name": "Assimilator",
-            "Minerals": 75,
-            "Gas": 0,
-            "BuildTime": 30
-        },
-        {
-            "Name": "Photon Cannon",
-            "Minerals": 150,
-            "Gas": 0,
-            "BuildTime": 40
-        },
-        {
-            "Name": "Gateway",
-            "Minerals": 150,
-            "Gas": 0,
-            "BuildTime": 65
-        },
-        {
-            "Name": "Stargate",
-            "Minerals": 150,
-            "Gas": 150,
-            "BuildTime": 60
-        },
-        {
-            "Name": "Robotics Facility",
-            "Minerals": 200,
-            "Gas": 100,
-            "BuildTime": 65
-        },
-        {
-            "Name": "Forge",
-            "Minerals": 150,
-            "Gas": 0,
-            "BuildTime": 45
-        },
-        {
-            "Name": "Cybernetics Core",
-            "Minerals": 150,
-            "Gas": 0,
-            "BuildTime": 50
-        },
-        {
-            "Name": "Twilight Council",
-            "Minerals": 150,
-            "Gas": 100,
-            "BuildTime": 50
-        },
-        {
-            "Name": "Templar Archives",
-            "Minerals": 150,
-            "Gas": 200,
-            "BuildTime": 50
-        },
-        {
-            "Name": "Dark Shrine",
-            "Minerals": 150,
-            "Gas": 150,
-            "BuildTime": 100
-        },
-        {
-            "Name": "Fleet Beacon",
-            "Minerals": 300,
-            "Gas": 200,
-            "BuildTime": 60
-        },
-        {
-            "Name": "Robotics Bay",
-            "Minerals": 200,
-            "Gas": 200,
-            "BuildTime": 65
-        },
-    ],
-
-    "upgrades": [
-        {
-            "Name": "Warp Gate",
-            "Minerals": 50,
-            "Gas": 50,
-            "BuildTime": 160
-        },
-    ]
+    }
+    return copy;
 }
 
 var app = angular.module('myApp', []);
 app.controller('homeController', ["$scope", "$timeout", function ($scope, $timeout) {
+    // Object lists
     $scope.units = data.units;
     $scope.buildings = data.buildings;
     $scope.upgrades = data.upgrades;
+    $scope.constructed = {};
 
     /// Settings
     $scope.autoBuildProbes = false;
+    $scope.useSupplyInsert = false;
 
-    $scope.supply = 7;
-    $scope.supplyCap = 10;
+    // Game Data
     $scope.timeString = "00:00";
     $scope.mode = "Start";
+    $scope.supplyInsert = 7;
     
-    $scope.build = [];
+    // Build
+    $scope.build = new Build($scope, $timeout);
     $scope.buildOrderText = "";
 
     var timeInt = 0;
@@ -242,22 +34,33 @@ app.controller('homeController', ["$scope", "$timeout", function ($scope, $timeo
     var timerPromise;
     var previousElapsed = -1;
 
+
+    /// Initialize Function
     start();
     function start() {
-        var unit;
+        var unit, building, upgrade;
         $scope.units.forEach(function (unit) {
             unit.ThumbnailName = unit.Name.split(' ').join('-').toLowerCase();
             unit.Type = 'A';
+
+            unit.Unlocked = !unit.Req;
+            $scope.constructed[unit.Name] = 0;
         });
 
         $scope.buildings.forEach(function (building) {
             building.ThumbnailName = building.Name.split(' ').join('-').toLowerCase();
             building.Type = 'B';
+
+            building.Unlocked = !building.Req;
+            $scope.constructed[building.Name] = 0;
         });
 
         $scope.upgrades.forEach(function (upgrade) {
             upgrade.ThumbnailName = upgrade.Name.split(' ').join('-').toLowerCase();
-            upgrade.Type = 'U'
+            upgrade.Type = 'U';
+
+            upgrade.Unlocked = !upgrade.Req;
+            $scope.constructed[upgrade.Name] = 0;
         });
     }
 
@@ -287,35 +90,55 @@ app.controller('homeController', ["$scope", "$timeout", function ($scope, $timeo
         timerPromise = $timeout(function () { timerUpdate(); }, 100);
     }
 
-    function shallowCopy(obj) {
-        var copy = {};
-        for (var attr in obj) {
-            if (attr !== '$$hashKey' && obj.hasOwnProperty(attr)) {
-                copy[attr] = obj[attr];
-            }
-        }
-        return copy;
-    }
-
-    function createAction(obj) {
-        var action = shallowCopy(obj);
-
-        action.Time = $scope.timeString;
-        action.SupplyAtBuild = $scope.supply;
-        return action;
-    }
-
     function stop() {
         $timeout.cancel(timerPromise);
         $scope.reset();
     }
 
-    $scope.reset = function() {
-        $scope.supply = 7;
-        $scope.supplyCap = 10;
+    $scope.reset = function () {
         $scope.timeString = "00:00";
-        $scope.build = [];
+        $scope.build = new Build($scope, $timeout);
         $scope.buildOrderText = "";
+    }
+
+    $scope.updateUnlocked = function() {
+        var i, unit, bulding, upgrade;
+
+        $scope.units.forEach(function (unit) {
+            unit.Unlocked = true;
+            if (unit.Req) {
+                for (i = 0; i < unit.Req.length; i++) {
+                    if (!$scope.constructed[unit.Req[i]]) {
+                        unit.Unlocked = false;
+                        break;
+                    }
+                }
+            }
+        });
+
+        $scope.buildings.forEach(function (building) {
+            building.Unlocked = true;
+            if (building.Req) {
+                for (i = 0; i < building.Req.length; i++) {
+                    if (!$scope.constructed[building.Req[i]]) {
+                        building.Unlocked = false;
+                        break;
+                    }
+                }
+            }
+        });
+
+        $scope.upgrades.forEach(function (upgrade) {
+            upgrade.Unlocked = true;
+            if (upgrade.Req) {
+                for (i = 0; i < upgrade.Req.length; i++) {
+                    if (!$scope.constructed[upgrade.Req[i]]) {
+                        upgrade.Unlocked = false;
+                        break;
+                    }
+                }
+            }
+        });
     }
 
     $scope.toggleTimer = function () {
@@ -329,18 +152,6 @@ app.controller('homeController', ["$scope", "$timeout", function ($scope, $timeo
         }
     };
 
-    $scope.incrementCount = function (unit, doIncrement) {
-        if (unit.Type === 'A') {
-            if (doIncrement) {
-                unit.Count++;
-                $scope.supply += unit.Supply;
-            } else if (unit.Count > 1) {
-                unit.Count--;
-                $scope.supply -= unit.Supply;
-            }
-        }
-    }
-
     $scope.addProbe = function () {
         probe = {
             "Name": "Probe",
@@ -353,54 +164,131 @@ app.controller('homeController', ["$scope", "$timeout", function ($scope, $timeo
         $scope.addUnit(probe);
     }
 
-    $scope.addUnit = function (unit) {
-        if ($scope.supplyCap >= ($scope.supply + unit.Supply)) {
-            var line = "";
-            line = "\n" + unit.Name + " at " + $scope.timeString;
-            $scope.buildOrderText += line;
+    //function mergeActions(action, oldSupplyChar) {
+    //    var i, keys, key, object;
+    //    var newSupplyChar = String.fromCharCode(action.BuildSupply);
+    //    if ($scope.build[newSupplyChar]) {
+    //        var newAction = $scope.build[newSupplyChar];
+            
+    //        keys = Object.keys(action.Objects);
+    //        for (i = 0; i < keys.length; i++) {
+    //            key = keys[i];
+    //            if (key !== '$$hashKey' && action.Objects.hasOwnProperty(key)) {
+    //                object = action.Objects[keys[i]];
 
-            $scope.supply += unit.Supply;
-            var action = createAction(unit);
-            action.Count = 1;
-            $scope.build.push(action);
-        }
-    }
+    //                // If the object is already in the action just merge counts
+    //                if (newAction.Objects[key]) {
+    //                    newAction.Objects[key].Count += object.Count;
+    //                } else {
+    //                    newAction.Objects[key] = object;
+    //                }
+    //            }
+    //        }
+    //    } else {
+    //        // No action exists at that supply. So just change the property key to match the Action's Build Supply
+    //        $scope.build[newSupplyChar] = action;
+    //    }
 
-    $scope.addBuilding = function (building) {
-        var line = "";
-        line = "\n" + building.Name + " at " + $scope.timeString;
-        $scope.buildOrderText += line;
+    //    delete $scope.build[oldSupplyChar];
+    //}
 
-        var action = createAction(building);
-        $scope.build.push(action);
+    //$scope.changeBuildSupply = function (action, supplyChar, change) {
+    //    action.BuildSupply += change;
+    //    action.BuildSupply = Math.max(0, action.BuildSupply);
 
-        if (building.Name === "Pylon") {
-            $scope.supplyCap += 8;
-        }
-    }
+    //    if (supplyChangePromise) $timeout.cancel(supplyChangePromise);
+    //    supplyChangePromise = $timeout(mergeActions.bind(null, action, supplyChar), 1000);
+    //}
 
-    $scope.addUpgrade = function (upgrade) {
-        var line = "";
-        line = "\n" + upgrade.Name + " at " + $scope.timeString;
-        $scope.buildOrderText += line;
+    //$scope.addToBuild = function (obj, supplyChar) {
+    //    if (!supplyChar) {
+    //        if ($scope.useSupplyInsert) {
+    //            supplyChar = String.fromCharCode($scope.supplyInsert);
+    //        } else {
+    //            supplyChar = String.fromCharCode($scope.supply);
+    //        }
+    //    }
 
-        var action = createAction(upgrade);
-        $scope.build.push(action);
-    }
+    //    var action = $scope.build[supplyChar];
+    //    var clone = shallowCopy(obj);
+    //    clone.Count = 1;
 
-    $scope.removeAction = function (action) {
-        for (var i = 0; i < $scope.build.length; i++) {
-            if ($scope.build[i].SupplyAtBuild === action.SupplyAtBuild) {
-                $scope.build.splice(i, 1);
-                if (action.Type === 'A')
-                    $scope.supply -= action.Count * action.Supply;
+    //    // If the action was not created yet do so
+    //    if (!action) {
+    //        action = {};
+    //        action.Time = $scope.timeString;
+    //        action.BuildSupply = supplyChar.charCodeAt(0);
+    //        action.Objects = {};
+    //        $scope.build[supplyChar] = action;
 
-                if (action.Name === 'Pylon')
-                    $scope.supplyCap -= 8;
-                break;
-            }
-        }
-    }
+    //        action.Objects[obj.Name] = clone;
+    //    } else {
+    //        // Check if the object is already in the array
+    //        if (action.Objects[obj.Name]) {
+    //            action.Objects[obj.Name].Count++;
+    //        } else {
+    //            action.Objects[obj.Name] = clone;
+    //        }
+    //    }
+
+    //    if (obj.Type === 'A') {
+    //        $scope.supply += obj.Supply;
+    //    } else if (obj.Type === 'B') {
+    //        // If supply giver add to supply cap
+    //        if (obj.Name === "Pylon") {
+    //            $scope.supplyCap += 8;
+    //        }
+    //    }
+
+    //    // Add to constructed
+    //    $scope.constructed[obj.Name]++;
+    //    updateUnlocked();
+    //}
+
+    //$scope.removeFromBuild = function (obj, count, supplyChar) {
+    //    var i;
+    //    var action = $scope.build[supplyChar];
+
+    //    obj.Count -= count;
+    //    if (obj.Supply) $scope.supply -= (obj.Supply * count);
+    //    if (obj.Name === 'Pylon') $scope.supplyCap -= (8 * count);
+    //    $scope.constructed[obj.Name] -= count;
+
+    //    // We  have removed all of the object from an action
+    //    if (obj.Count <= 0) {
+    //        delete action.Objects[obj.Name];
+
+    //        // There are no objects left on an action
+    //        if (Object.keys(action.Objects).length === 0) {
+    //            delete $scope.build[supplyChar];
+    //        }
+
+    //        updateUnlocked();
+    //    }
+    //}
+
+    //$scope.addUpgrade = function (upgrade) {
+    //    var line = "";
+    //    line = "\n" + upgrade.Name + " at " + $scope.timeString;
+    //    $scope.buildOrderText += line;
+
+    //    AddToBuild(upgrade);
+    //}
+
+    //$scope.removeAction = function (supplyChar) {
+    //    var object, i, length, key, keys;
+    //    var objects = $scope.build[supplyChar].Objects;
+
+    //    keys = Object.keys(objects);
+    //    for (i = 0; i < keys.length; i++) {
+    //        key = keys[i];
+    //        if (key !== '$$hashKey' && objects.hasOwnProperty(key)) {
+    //            // Objects are removed from the array as removeFromBuild is called.  So always grab the first index.
+    //            object = objects[key];
+    //            $scope.removeFromBuild(object, object.Count, supplyChar);
+    //        }
+    //    }
+    //}
 }]);
 
 app.directive('ngRightClick', function ($parse) {
@@ -412,5 +300,11 @@ app.directive('ngRightClick', function ($parse) {
                 fn(scope, { $event: event });
             });
         });
+    };
+});
+
+app.filter('num', function () {
+    return function (input) {
+        return parseInt(input, 10);
     };
 });
