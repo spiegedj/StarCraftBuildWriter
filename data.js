@@ -243,5 +243,189 @@ data = {
             "BuildTime": 160,
             "Req": ["Cybernetics Core"]
         },
+
+        {
+            "Name": "Ground Weapons Level 1",
+            "Minerals": 100,
+            "Gas": 100,
+            "BuildTime": 160,
+            "Req": ["Forge"]
+        },
+
+        {
+            "Name": "Ground Weapons Level 2",
+            "Minerals": 150,
+            "Gas": 150,
+            "BuildTime": 190,
+            "Req": ["Forge", "Ground Weapons Level 1"]
+        },
+
+        {
+            "Name": "Ground Weapons Level 3",
+            "Minerals": 200,
+            "Gas": 200,
+            "BuildTime": 220,
+            "Req": ["Forge", "Ground Weapons Level 2"]
+        },
+
+        {
+            "Name": "Ground Armor Level 1",
+            "Minerals": 100,
+            "Gas": 100,
+            "BuildTime": 160,
+            "Req": ["Forge"]
+        },
+
+        {
+            "Name": "Ground Armor Level 2",
+            "Minerals": 150,
+            "Gas": 150,
+            "BuildTime": 190,
+            "Req": ["Forge", "Ground Armor Level 1"]
+        },
+
+        {
+            "Name": "Ground Armor Level 3",
+            "Minerals": 200,
+            "Gas": 200,
+            "BuildTime": 220,
+            "Req": ["Forge", "Ground Armor Level 2"]
+        },
+
+        {
+            "Name": "Air Weapons Level 1",
+            "Minerals": 100,
+            "Gas": 100,
+            "BuildTime": 160,
+            "Req": ["Cybernetics Core"]
+        },
+
+        {
+            "Name": "Air Weapons Level 2",
+            "Minerals": 175,
+            "Gas": 175,
+            "BuildTime": 190,
+            "Req": ["Cybernetics Core", "Air Weapons Level 1"]
+        },
+
+        {
+            "Name": "Air Weapons Level 3",
+            "Minerals": 250,
+            "Gas": 250,
+            "BuildTime": 220,
+            "Req": ["Cybernetics Core", "Air Weapons Level 2"]
+        },
+
+        {
+            "Name": "Air Armor Level 1",
+            "Minerals": 100,
+            "Gas": 100,
+            "BuildTime": 160,
+            "Req": ["Cybernetics Core"]
+        },
+
+        {
+            "Name": "Air Armor Level 2",
+            "Minerals": 175,
+            "Gas": 175,
+            "BuildTime": 190,
+            "Req": ["Cybernetics Core", "Air Armor Level 1"]
+        },
+
+        {
+            "Name": "Air Armor Level 3",
+            "Minerals": 250,
+            "Gas": 250,
+            "BuildTime": 220,
+            "Req": ["Cybernetics Core", "Air Armor Level 2"]
+        },
+
+        {
+            "Name": "Shields Level 1",
+            "Minerals": 150,
+            "Gas": 150,
+            "BuildTime": 160,
+            "Req": ["Forge"]
+        },
+
+        {
+            "Name": "Shields Level 2",
+            "Minerals": 225,
+            "Gas": 225,
+            "BuildTime": 190,
+            "Req": ["Forge", "Shields Level 1"]
+        },
+
+        {
+            "Name": "Shields Level 3",
+            "Minerals": 300,
+            "Gas": 300,
+            "BuildTime": 220,
+            "Req": ["Forge", "Shields Level 2"]
+        },
+
+        {
+            "Name": "Charge",
+            "Minerals": 200,
+            "Gas": 200,
+            "BuildTime": 140,
+            "Req": ["Twilight Council"]
+        },
+
+        {
+            "Name": "Blink",
+            "Minerals": 150,
+            "Gas": 150,
+            "BuildTime": 140,
+            "Req": ["Twilight Council"]
+        },
+
+        {
+            "Name": "Extended Thermal Lance",
+            "Minerals": 200,
+            "Gas": 200,
+            "BuildTime": 140,
+            "Req": ["Robotics Bay"]
+        },
+
+        {
+            "Name": "Psionic Storm",
+            "Minerals": 200,
+            "Gas": 200,
+            "BuildTime": 110,
+            "Req": ["Templar Archives"]
+        },
+
+        {
+            "Name": "Gravity Boosters",
+            "Minerals": 100,
+            "Gas": 100,
+            "BuildTime": 80,
+            "Req": ["Robotics Bay"]
+        },
+
+        {
+            "Name": "Gravity Drive",
+            "Minerals": 100,
+            "Gas": 100,
+            "BuildTime": 80,
+            "Req": ["Robotics Bay"]
+        },
+
+        {
+            "Name": "Anion Pulse-Crystals",
+            "Minerals": 150,
+            "Gas": 150,
+            "BuildTime": 90,
+            "Req": ["Fleet Beacon"]
+        },
+
+        {
+            "Name": "Graviton Catapult",
+            "Minerals": 150,
+            "Gas": 150,
+            "BuildTime": 80,
+            "Req": ["Fleet Beacon"]
+        },
     ]
 }

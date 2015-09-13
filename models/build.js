@@ -45,9 +45,9 @@ Build.prototype = {
             }
         }
 
+
         var action = this.actions[supplyChar];
-        var clone = shallowCopy(obj);
-        clone.Count = 1;
+
 
         // If the action was not created yet do so
         if (!action) {
@@ -55,21 +55,34 @@ Build.prototype = {
             this.actions[supplyChar] = action;
         }
 
-        action.addObject(clone);
+        if (obj.Type === 'U') {
+            obj.Count = 1;
+            action.addObject(obj);
+        } else {
+            var clone = shallowCopy(obj);
+            clone.Count = 1;
+            action.addObject(clone);
+        }
 
         if (obj.Supply) this.supply += (obj.Supply);
         if (obj.Name === 'Pylon') this.supplyCap += (8);
+        if (obj.Type === 'U') {
+            obj.Built = true;
+        }
         this.$scope.constructed[obj.Name]++;
 
         this.$scope.updateUnlocked();
     },
 
     removeFromBuild: function (obj, count, supplyChar) {
-        var i;
+        var i, upgrade;
         var action = this.actions[supplyChar];
 
         if (obj.Supply) this.supply -= (obj.Supply * count);
         if (obj.Name === 'Pylon') this.supplyCap -= (8 * count);
+        if (obj.Type === 'U') {
+            obj.Built = false;
+        }
         this.$scope.constructed[obj.Name] -= count;
 
         obj.Count -= count;

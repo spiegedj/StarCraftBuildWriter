@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="home.css" />
     <link rel="stylesheet" type="text/css" href="unit-thumbnails.css" />
     <link rel="stylesheet" type="text/css" href="buildings.css" />
+    <link rel="stylesheet" type="text/css" href="upgrades.css" />
 </head>
 <body >
     <div ng-app="myApp" ng-controller="homeController">
@@ -48,8 +49,10 @@
 
                 <h1 class="clear">Upgrades</h1>
 
-                <div>
-                    <span ng-repeat="upgrade in upgrades"><button ng-click="addUpgrade(upgrade)">{{ upgrade.Name }}</button></span>
+                <div ng-repeat="upgrade in upgrades" style="float: left">
+                    <span class="upgrade-thumb" ng-click="build.addToBuild(upgrade)" ng-if="upgrade.Unlocked && !upgrade.Built">
+                        <span class="{{ upgrade.ThumbnailName }}"></span>
+                    </span>
                 </div>
             </div>
 
@@ -83,7 +86,13 @@
                                 <tr>
                                     <td class="table-count">{{ obj.Count > 1 ? obj.Count : "" }}</td>
                                     <td class="portrait-c">
-                                        <span class="{{ obj.Type == 'A' ? 'unit-thumb-54x49' : 'building-thumb-54x49'  }}">
+                                        <span ng-if="obj.Type === 'A'" class="unit-thumb-54x49">
+                                            <span class="{{ obj.ThumbnailName }}"></span>
+                                        </span>
+                                        <span ng-if="obj.Type === 'B'" class="building-thumb-54x49">
+                                            <span class="{{ obj.ThumbnailName }}"></span>
+                                        </span>
+                                        <span ng-if="obj.Type === 'U'" class="upgrade-thumb-54x49">
                                             <span class="{{ obj.ThumbnailName }}"></span>
                                         </span>
                                     </td>
