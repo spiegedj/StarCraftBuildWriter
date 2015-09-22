@@ -1,7 +1,7 @@
 /* Upgrades Large */
 
 .upgrade-thumb, .upgrade-thumb span { display: block; color:#3B7CB9; width:62px; height:62px; margin: 5px;}
-.upgrade-thumb span { height:62px; margin-bottom: 5px; background:url('images/upgrades.png') no-repeat;}
+.upgrade-thumb span { height:62px; margin-bottom: 5px; background:url('/static/images/upgrades.png') no-repeat;}
 
 .upgrade-thumb:hover .warp-gate {background-position:-62px 0;}
 .upgrade-thumb .warp-gate {background-position:0 0;}
@@ -103,7 +103,7 @@
 .upgrade-thumb-54x49 span { margin: -5px 0 0 -5px; }
 
 .upgrade-thumb-54x49, .upgrade-thumb-54x49 span {display:block; }
-.upgrade-thumb-54x49 span {height:49px; background:url('images/upgrade-thumbs-54x49.gif') no-repeat;}
+.upgrade-thumb-54x49 span {height:49px; background:url('/static/images/upgrade-thumbs-54x49.gif') no-repeat;}
 
 
 .upgrade-thumb-54x49 .warp-gate               {background-position:5px 6px;}

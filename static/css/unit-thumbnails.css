@@ -1,7 +1,7 @@
 /* portraits */
-.portrait-a { display: block; width: 75px; height: 75px; padding: 3px 7px 4px 6px; background: url("images/portrait-frame.gif") 0 -114px no-repeat; }
-.portrait-b { display: block; width: 59px; height: 59px; padding: 3px 0 0 6px; background: url("images/portrait-frame.gif") 0 -210px no-repeat; }
-.portrait-c { display: block; width: 50px; height: 48px; padding: 2px 0 0 5px; background: url("images/portrait-frame.gif") 0 -287px no-repeat; }
+.portrait-a { display: block; width: 75px; height: 75px; padding: 3px 7px 4px 6px; background: url("/static/images/portrait-frame.gif") 0 -114px no-repeat; }
+.portrait-b { display: block; width: 59px; height: 59px; padding: 3px 0 0 6px; background: url("/static/images/portrait-frame.gif") 0 -210px no-repeat; }
+.portrait-c { display: block; width: 50px; height: 48px; padding: 2px 0 0 5px; background: url("/static/images/portrait-frame.gif") 0 -287px no-repeat; }
 .portrait-a .icon-frame,
 .portrait-b .icon-frame,
 .portrait-c .icon-frame { -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; }
@@ -17,7 +17,7 @@
 
 /****		Units Thumbnails styles	: 80x72	****/
 .unit-thumb, .unit-thumb span { display: block; color:#3B7CB9; width:75px; height:75px }
-.unit-thumb span { height:72px; margin-bottom: 5px; background:url('images/unit-thumbs-table.gif') no-repeat;}
+.unit-thumb span { height:72px; margin-bottom: 5px; background:url('/static/images/unit-thumbs-table.gif') no-repeat;}
 
 /* Protoss */
 .unit-thumb:hover .probe {background-position:-400px -25px;}
@@ -128,7 +128,7 @@
 
 /**** Units Thumbnails styles : 54x49	Added code to fix IE6 bug. Don't remove it! ****/
 .unit-thumb-54x49, .unit-thumb-54x49 span {display:block; }
-.unit-thumb-54x49 span {height:49px; background:url('images/unit-thumbs-54x49-table.gif') no-repeat;}
+.unit-thumb-54x49 span {height:49px; background:url('/static/images/unit-thumbs-54x49-table.gif') no-repeat;}
 
 /* Protoss */
 .unit-thumb-54x49 .probe {background-position:0 -12px;}

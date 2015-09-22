@@ -2,7 +2,7 @@
 /* Building Large */
 
 .building-thumb, .building-thumb span { display: block; color:#3B7CB9; width:268px; height:90px; margin: 5px;}
-.building-thumb span { height:90px; margin-bottom: 5px; background:url('images/buildings.png') no-repeat;}
+.building-thumb span { height:90px; margin-bottom: 5px; background:url('/static/images/buildings.png') no-repeat;}
 
 .building-thumb:hover .nexus {background-position:-278px 0;}
 .building-thumb .nexus {background-position:0 0;}
@@ -52,7 +52,7 @@
 .building-thumb-54x49 span { margin: -5px 0 0 -5px; }
 
 .building-thumb-54x49, .building-thumb-54x49 span {display:block; }
-.building-thumb-54x49 span {height:49px; background:url('images/building-thumbs-54x49.gif') no-repeat;}
+.building-thumb-54x49 span {height:49px; background:url('/static/images/building-thumbs-54x49.gif') no-repeat;}
 
 .building-thumb-54x49 .nexus                {background-position:0 0;}
 .building-thumb-54x49 .pylon                {background-position:0 -49px;}

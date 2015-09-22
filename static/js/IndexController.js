@@ -1,15 +1,4 @@
-function shallowCopy(obj) {
-    var copy = {};
-    for (var attr in obj) {
-        if (attr !== '$$hashKey' && obj.hasOwnProperty(attr)) {
-            copy[attr] = obj[attr];
-        }
-    }
-    return copy;
-}
-
-var app = angular.module('myApp', []);
-app.controller('homeController', ["$scope", "$timeout", function ($scope, $timeout) {
+app.controller('IndexController', ["$scope", "$timeout", function ($scope, $timeout) {
     // Object lists
     $scope.units = data.units;
     $scope.buildings = data.buildings;

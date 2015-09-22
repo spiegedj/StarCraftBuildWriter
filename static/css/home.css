@@ -65,11 +65,11 @@ body {
     margin: 200px auto;
     width: 280px;
     height: 65px;
-    background-image: url('images/PlayButton.png');
+    background-image: url('/static/images/PlayButton.png');
 }
 
 #play-button:hover {
-    background-image: url('images/PlayButtonActive.png');
+    background-image: url('/static/images/PlayButtonActive.png');
 }
 
 /* Build Order Table */
