@@ -1,0 +1,135 @@
+/* Upgrades Large */
+
+.upgrade-thumb, .upgrade-thumb span { display: block; color:#3B7CB9; width:62px; height:62px; margin: 5px;}
+.upgrade-thumb span { height:62px; margin-bottom: 5px; background:url('images/upgrades.png') no-repeat;}
+
+.upgrade-thumb:hover .warp-gate {background-position:-62px 0;}
+.upgrade-thumb .warp-gate {background-position:0 0;}
+
+
+/*******************           Ground               **************************/
+
+.upgrade-thumb:hover .ground-armor-level-1 {background-position:-62px -62px;}
+.upgrade-thumb .ground-armor-level-1 {background-position:0 -62px;}
+
+.upgrade-thumb:hover .ground-armor-level-2 {background-position:-62px -124px;}
+.upgrade-thumb .ground-armor-level-2 {background-position:0 -124px;}
+
+.upgrade-thumb:hover .ground-armor-level-3 {background-position:-62px -186px;}
+.upgrade-thumb .ground-armor-level-3 {background-position:0 -186px;}
+
+
+.upgrade-thumb:hover .ground-weapons-level-1 {background-position:-62px -1054px;}
+.upgrade-thumb .ground-weapons-level-1 {background-position:0 -1054px;}
+
+.upgrade-thumb:hover .ground-weapons-level-2 {background-position:-62px -1116px;}
+.upgrade-thumb .ground-weapons-level-2 {background-position:0 -1116px;}
+
+.upgrade-thumb:hover .ground-weapons-level-3 {background-position:-62px -1178px;}
+.upgrade-thumb .ground-weapons-level-3 {background-position:0 -1178px;}
+
+
+
+/*******************           Air               **************************/
+
+.upgrade-thumb:hover .air-armor-level-1 {background-position:-62px -248px;}
+.upgrade-thumb .air-armor-level-1 {background-position:0 -248px;}
+
+.upgrade-thumb:hover .air-armor-level-2 {background-position:-62px -310px;}
+.upgrade-thumb .air-armor-level-2 {background-position:0 -310px;}
+
+.upgrade-thumb:hover .air-armor-level-3 {background-position:-62px -372px;}
+.upgrade-thumb .air-armor-level-3 {background-position:0 -372px;}
+
+
+.upgrade-thumb:hover .air-weapons-level-1 {background-position:-62px -1240px;}
+.upgrade-thumb .air-weapons-level-1 {background-position:0 -1240px;}
+
+.upgrade-thumb:hover .air-weapons-level-2 {background-position:-62px -1302px;}
+.upgrade-thumb .air-weapons-level-2 {background-position:0 -1302px;}
+
+.upgrade-thumb:hover .air-weapons-level-3 {background-position:-62px -1364px;}
+.upgrade-thumb .air-weapons-level-3 {background-position:0 -1364px;}
+
+
+
+/*******************           Shields               **************************/
+
+
+.upgrade-thumb:hover .shields-level-1 {background-position:-62px -434px;}
+.upgrade-thumb .shields-level-1 {background-position:0 -434px;}
+
+.upgrade-thumb:hover .shields-level-2 {background-position:-62px -496px;}
+.upgrade-thumb .shields-level-2 {background-position:0 -496px;}
+
+.upgrade-thumb:hover .shields-level-3 {background-position:-62px -558px;}
+.upgrade-thumb .shields-level-3 {background-position:0 -558px;}
+
+
+
+
+/*******************           Other               **************************/
+
+.upgrade-thumb:hover .charge {background-position:-62px -620px;}
+.upgrade-thumb .charge {background-position:0 -620px;}
+
+.upgrade-thumb:hover .blink {background-position:-62px -682px;}
+.upgrade-thumb .blink {background-position:0 -682px;}
+
+.upgrade-thumb:hover .extended-thermal-lance {background-position:-62px -744px;}
+.upgrade-thumb .extended-thermal-lance {background-position:0 -744px;}
+
+.upgrade-thumb:hover .psionic-storm {background-position:-62px -806px;}
+.upgrade-thumb .psionic-storm {background-position:0 -806px;}
+
+.upgrade-thumb:hover .gravity-boosters {background-position:-62px -868px;}
+.upgrade-thumb .gravity-boosters {background-position:0 -868px;}
+
+.upgrade-thumb:hover .gravity-drive {background-position:-62px -930px;}
+.upgrade-thumb .gravity-drive {background-position:0 -930px;}
+
+.upgrade-thumb:hover .anion-pulse-crystals {background-position:-62px -992px;}
+.upgrade-thumb .anion-pulse-crystals {background-position:0 -992px;}
+
+.upgrade-thumb:hover .graviton-catapult {background-position:-62px -1426px;}
+.upgrade-thumb .graviton-catapult {background-position:0 -1426px;}
+
+
+
+/*******************           Thumbnails               **************************/
+
+
+.upgrade-thumb-54x49 { width: 45px; height: 45px; overflow: hidden; background: #000; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+.upgrade-thumb-54x49 span { margin: -5px 0 0 -5px; }
+
+.upgrade-thumb-54x49, .upgrade-thumb-54x49 span {display:block; }
+.upgrade-thumb-54x49 span {height:49px; background:url('images/upgrade-thumbs-54x49.gif') no-repeat;}
+
+
+.upgrade-thumb-54x49 .warp-gate               {background-position:5px 6px;}
+.upgrade-thumb-54x49 .ground-armor-level-1    {background-position:5px -39px;}
+.upgrade-thumb-54x49 .ground-armor-level-2    {background-position:5px -84px;}
+.upgrade-thumb-54x49 .ground-armor-level-3    {background-position:5px -129px;}
+.upgrade-thumb-54x49 .ground-weapons-level-1  {background-position:5px -759px;}
+.upgrade-thumb-54x49 .ground-weapons-level-2  {background-position:5px -804px;}
+.upgrade-thumb-54x49 .ground-weapons-level-3  {background-position:5px -849px;}
+
+.upgrade-thumb-54x49 .air-armor-level-2               {background-position:5px -174px;}
+.upgrade-thumb-54x49 .air-armor-level-1               {background-position:5px -219px;}   
+.upgrade-thumb-54x49 .air-armor-level-3               {background-position:5px -264px;}
+.upgrade-thumb-54x49 .air-weapons-level-1             {background-position:5px -894px;}
+.upgrade-thumb-54x49 .air-weapons-level-2             {background-position:5px -939px;}
+.upgrade-thumb-54x49 .air-weapons-level-3             {background-position:5px -984px;}
+
+.upgrade-thumb-54x49 .shields-level-1 {background-position:5px -309px;}
+.upgrade-thumb-54x49 .shields-level-2 {background-position:5px -354px;}
+.upgrade-thumb-54x49 .shields-level-3 {background-position:5px -399px;}
+
+.upgrade-thumb-54x49 .charge                  {background-position:5px -444px;}
+.upgrade-thumb-54x49 .blink                   {background-position:5px -489px;}
+.upgrade-thumb-54x49 .extended-thermal-lance  {background-position:5px -534px;}
+.upgrade-thumb-54x49 .psionic-storm           {background-position:5px -579px;}
+.upgrade-thumb-54x49 .gravity-boosters        {background-position:5px -624px;}
+.upgrade-thumb-54x49 .gravity-drive           {background-position:5px -669px;}
+.upgrade-thumb-54x49 .anion-pulse-crystals    {background-position:5px -714px;}
+.upgrade-thumb-54x49 .graviton-catapult       {background-position:5px -1029px;}
